@@ -39,6 +39,7 @@ const parsePage = ($) => {
     result.push({
       author: $($(this).find('.spaceit td:nth-child(2) a')['0']).text().trim(),
       date: malDateToJsDate($($(this).find('.spaceit .mb8 div')['0']).text().trim()),
+      createdAt: malDateToJsDate($($(this).find('.spaceit .mb8 div')['0']).text().trim()),
       seen: $(this).find('.spaceit .mb8 .lightLink').text().trim(),
       overall: malNumberToJsNumber($(notes).find('tr:nth-child(1) td:nth-child(2)').text().trim()),
       story: malNumberToJsNumber($(notes).find('tr:nth-child(2) td:nth-child(2)').text().trim()),
